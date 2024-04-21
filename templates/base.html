@@ -3,20 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>todo app</title>
+  <title>QuackList</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
-  <script  ript src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <link rel="shortcut icon" href="https://cs50.gallerycdn.vsassets.io/extensions/cs50/ddb50/1.1.2/1691002683906/Microsoft.VisualStudio.Services.Icons.Default" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
 
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    body{
+      background-color: #f7f7f7;
+    }
+    header{
+      padding: 3rem;
+      margin-bottom: 2rem;
+      background-color: #0E6EB8;
+      color: white ;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 2.1rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+    .p{
+      font-style: italic;
+      font-family: monospace;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .flex{
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <div style="margin-top: 50px;" class="ui container">
-    <h1 class="ui center aligned header">Todo App</h1>
+  <div class="ui container">
+    <header>
+      <div class="flex">
+        <h1>QuackList</h1>
+        <img class="ui mini image" src="https://cs50.gallerycdn.vsassets.io/extensions/cs50/ddb50/1.1.2/1691002683906/Microsoft.VisualStudio.Services.Icons.Default" alt="">
+      </div>
+      <p class="p">Where Every Task Gets Its Ducks in a Row!</p>
+    </header>
 
     <form class="ui form" action="/add" method="post">
       <div class="field">
-        <label for="title">Todo Title</label>
-        <input type="text" name="title" placeholder="Enter Todo..."><br>
-        <button class="ui blue button" type="submit">Add</button>
+        <label for="title">Task Title</label>
+        <input type="text" name="title" placeholder="Enter a new Task"><br>
+        <button style="margin-top: 1rem;" class="ui blue button" type="submit">Add</button>
       </div>
     </form>
 
